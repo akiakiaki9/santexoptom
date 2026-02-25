@@ -1,0 +1,18 @@
+/* styles/globals.css */
+:root {
+    --color-wet-asphalt: #2C3E50;
+    --color-gray: #95A5A6;
+    --color-white: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-white);
+    color: var(--color-wet-asphalt);
+    font-family: system-ui, -apple-system, sans-serif;
+}
