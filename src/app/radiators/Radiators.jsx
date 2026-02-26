@@ -1,6 +1,5 @@
 'use client';
 import React, { useState, useEffect } from 'react';
-import Footer from '../components/footer/Footer';
 import RADIATORS from '../utils/radiators';
 import './radiators.css';
 
@@ -61,7 +60,7 @@ const RadiatorsPage = () => {
             }
             return updated;
         });
-        setCurrentPage(1); // Сброс на первую страницу при изменении фильтров
+        setCurrentPage(1);
     };
 
     const clearFilters = () => {
@@ -92,9 +91,9 @@ const RadiatorsPage = () => {
 
                     <div className="radiators-header">
                         <h1 className="radiators-title">Радиаторы</h1>
-                        
+
                         {/* Кнопка фильтра для мобилок */}
-                        <button 
+                        <button
                             className="mobile-filter-btn"
                             onClick={() => setIsFilterModalOpen(true)}
                         >
@@ -121,17 +120,17 @@ const RadiatorsPage = () => {
                                             checked={filters.series.includes(serie)}
                                             onChange={() => handleFilterChange('series', serie)}
                                         />
-                                        {serie === '60x' && 'Серия 60 см'}
-                                        {serie === '50x' && 'Серия 50 см'}
-                                        {serie === '40x' && 'Серия 40 см'}
-                                        {serie === '30x' && 'Серия 30 см'}
+                                        {serie === '60x' && 'Серия 60 см (высота)'}
+                                        {serie === '50x' && 'Серия 50 см (высота)'}
+                                        {serie === '40x' && 'Серия 40 см (высота)'}
+                                        {serie === '30x' && 'Серия 30 см (высота)'}
                                     </label>
                                 ))}
                             </div>
 
                             {/* Фильтр по размеру */}
                             <div className="filter-group">
-                                <h4>Размер (ШxВ)</h4>
+                                <h4>Размер (ВxШ)</h4>
                                 {sizes.map(size => (
                                     <label key={size} className="filter-label">
                                         <input
@@ -179,25 +178,28 @@ const RadiatorsPage = () => {
                         <div className="products-section">
                             <div className="products-grid">
                                 {currentProducts.map(product => (
-                                    <div 
-                                        key={product.id} 
+                                    <div
+                                        key={product.id}
                                         className="product-card"
                                         onMouseEnter={() => setHoveredProduct(product.id)}
                                         onMouseLeave={() => setHoveredProduct(null)}
                                     >
                                         <div
                                             className="product-image"
-                                            style={{ 
-                                                backgroundImage: `url(${product.image})` 
+                                            style={{
+                                                backgroundImage: `url(${product.image})`
                                             }}
                                         >
-                                            <span className="product-brand">RIFAR</span>
+                                            <span className="product-brand">
+                                                <img src="/images/creative.png" alt="creative" />
+                                                Creative
+                                            </span>
                                             <span className="product-series">{product.series}</span>
                                         </div>
 
                                         <div className="product-info">
                                             <h3 className="product-model">Радиатор {product.size}</h3>
-                                            <p className="product-size">Размер: {product.width} x {product.height} см</p>
+                                            <p className="product-size">Размер: {product.height} x {product.width} см</p>
                                             <p className="product-details">
                                                 Высота: {product.height} см<br />
                                                 Ширина: {product.width} см<br />
@@ -217,17 +219,16 @@ const RadiatorsPage = () => {
                             {/* Пагинация */}
                             {totalPages > 1 && (
                                 <div className="pagination">
-                                    <button 
+                                    <button
                                         className={`pagination-btn ${currentPage === 1 ? 'disabled' : ''}`}
                                         onClick={() => handlePageChange(currentPage - 1)}
                                         disabled={currentPage === 1}
                                     >
                                         ←
                                     </button>
-                                    
+
                                     {[...Array(totalPages)].map((_, index) => {
                                         const pageNumber = index + 1;
-                                        // Показываем только текущую страницу, первую, последнюю и соседние
                                         if (
                                             pageNumber === 1 ||
                                             pageNumber === totalPages ||
@@ -243,14 +244,13 @@ const RadiatorsPage = () => {
                                                 </button>
                                             );
                                         }
-                                        // Показываем многоточие
                                         if (pageNumber === currentPage - 2 || pageNumber === currentPage + 2) {
                                             return <span key={pageNumber} className="pagination-dots">...</span>;
                                         }
                                         return null;
                                     })}
-                                    
-                                    <button 
+
+                                    <button
                                         className={`pagination-btn ${currentPage === totalPages ? 'disabled' : ''}`}
                                         onClick={() => handlePageChange(currentPage + 1)}
                                         disabled={currentPage === totalPages}
@@ -279,7 +279,7 @@ const RadiatorsPage = () => {
                             <h3>Фильтры</h3>
                             <button className="filter-modal-close" onClick={() => setIsFilterModalOpen(false)}>×</button>
                         </div>
-                        
+
                         <div className="filter-modal-body">
                             <button onClick={clearFilters} className="clear-filters-mobile">Сбросить все фильтры</button>
 
@@ -293,17 +293,17 @@ const RadiatorsPage = () => {
                                             checked={filters.series.includes(serie)}
                                             onChange={() => handleFilterChange('series', serie)}
                                         />
-                                        {serie === '60x' && 'Серия 60 см'}
-                                        {serie === '50x' && 'Серия 50 см'}
-                                        {serie === '40x' && 'Серия 40 см'}
-                                        {serie === '30x' && 'Серия 30 см'}
+                                        {serie === '60x' && 'Серия 60 см (высота)'}
+                                        {serie === '50x' && 'Серия 50 см (высота)'}
+                                        {serie === '40x' && 'Серия 40 см (высота)'}
+                                        {serie === '30x' && 'Серия 30 см (высота)'}
                                     </label>
                                 ))}
                             </div>
 
                             {/* Фильтр по размеру */}
                             <div className="filter-group">
-                                <h4>Размер (ШxВ)</h4>
+                                <h4>Размер (ВxШ)</h4>
                                 {sizes.map(size => (
                                     <label key={size} className="filter-label">
                                         <input
@@ -348,7 +348,7 @@ const RadiatorsPage = () => {
                         </div>
 
                         <div className="filter-modal-footer">
-                            <button 
+                            <button
                                 className="apply-filters-btn"
                                 onClick={() => setIsFilterModalOpen(false)}
                             >
@@ -369,8 +369,11 @@ const RadiatorsPage = () => {
                             <div className="modal-images">
                                 <div
                                     className="modal-main-image"
-                                    style={{ backgroundImage: `url(${selectedProduct.image})` }}
+                                    style={{ backgroundImage: `url(${selectedProduct.detailImage})` }}
                                 ></div>
+                                <div className="color-variants">
+                                    <p className="color-text">✓ Доступен в разных цветах</p>
+                                </div>
                             </div>
 
                             <div className="modal-info">
@@ -380,14 +383,17 @@ const RadiatorsPage = () => {
                                     <tbody>
                                         <tr>
                                             <td>Бренд:</td>
-                                            <td>RIFAR</td>
+                                            <td className="brand-cell">
+                                                <img src="/images/creative.png" alt="creative" className="brand-logo" />
+                                                creative
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>Серия:</td>
                                             <td>{selectedProduct.series}</td>
                                         </tr>
                                         <tr>
-                                            <td>Размер:</td>
+                                            <td>Размер (В×Ш):</td>
                                             <td>{selectedProduct.size}</td>
                                         </tr>
                                         <tr>
@@ -408,7 +414,7 @@ const RadiatorsPage = () => {
                                 <div className="product-equipment">
                                     <h3>Описание:</h3>
                                     <p className="product-description">
-                                        Стальной панельный радиатор. Подходит для систем центрального и автономного отопления. 
+                                        Стальной панельный радиатор. Подходит для систем центрального и автономного отопления.
                                         Высокая теплоотдача, надежность и долговечность.
                                     </p>
                                 </div>
@@ -417,8 +423,6 @@ const RadiatorsPage = () => {
                     </div>
                 </div>
             )}
-
-            <Footer />
         </>
     );
 };

@@ -8,7 +8,7 @@ const CHASHAGENS = [
         glaze: 'Испания',
         color: 'Белый (касабланка)',
         price: 27,
-        image: '/images/chashagens/chashagen-1.jpg'
+        image: '/images/chashogen/1.png'
     },
     {
         id: 2,
@@ -19,7 +19,7 @@ const CHASHAGENS = [
         glaze: 'Испания',
         color: 'Белый (касабланка)',
         price: 27,
-        image: '/images/chashagens/chashagen-2.jpg'
+        image: '/images/chashogen/2.png'
     }
 ];
 

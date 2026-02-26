@@ -822,3 +822,166 @@
         max-height: 85vh;
     }
 }
+
+/* Добавить в конец файла radiators.css */
+
+/* Цветовые варианты */
+.color-variants {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 12px;
+}
+
+.color-variants h4 {
+    color: var(--color-wet-asphalt);
+    font-size: 1rem;
+    margin-bottom: 0.8rem;
+}
+
+.color-dots {
+    display: flex;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+}
+
+.color-dot {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.color-dot:hover {
+    transform: scale(1.15);
+    border-color: var(--color-wet-asphalt);
+}
+
+.color-dot.white { background: #ffffff; }
+.color-dot.beige { background: #f5f5dc; }
+.color-dot.gray { background: #808080; }
+.color-dot.black { background: #000000; }
+.color-dot.brown { background: #8b4513; }
+
+/* app/catalog/radiators/radiators.css (дополнения) */
+
+/* Бренд лого */
+.product-brand {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background: rgba(44, 62, 80, 0.9);
+    color: var(--color-white);
+    padding: 0.5rem 1rem;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    z-index: 1;
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.product-brand img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+}
+
+.product-series {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: rgba(149, 165, 166, 0.9);
+    color: var(--color-white);
+    padding: 0.5rem 1rem;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    z-index: 1;
+    backdrop-filter: blur(4px);
+}
+
+/* Модальное окно */
+.brand-cell {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.brand-logo {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+/* Цветовые варианты */
+.color-variants {
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.color-text {
+    color: var(--color-wet-asphalt);
+    font-size: 0.95rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.color-text::before {
+    content: '✓';
+    color: #27ae60;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+/* Адаптивность для бренда */
+@media (max-width: 768px) {
+    .product-brand {
+        padding: 0.3rem 0.8rem;
+        font-size: 0.8rem;
+    }
+    
+    .product-brand img {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .product-series {
+        padding: 0.3rem 0.8rem;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .product-brand {
+        padding: 0.2rem 0.6rem;
+        font-size: 0.7rem;
+        gap: 0.3rem;
+    }
+    
+    .product-brand img {
+        width: 16px;
+        height: 16px;
+    }
+    
+    .product-series {
+        padding: 0.2rem 0.6rem;
+        font-size: 0.7rem;
+    }
+    
+    .color-text {
+        font-size: 0.85rem;
+    }
+}

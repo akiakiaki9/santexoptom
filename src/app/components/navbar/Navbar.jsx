@@ -19,8 +19,16 @@ const Navbar = () => {
     ];
 
     const phoneNumbers = [
-        { number: '+998 (95) 868-20-02', link: 'tel:+998958682002' },
-        { number: '+998 (95) 705-20-02', link: 'tel:+998957052002' }
+        { 
+            number: '+998 (95) 868-20-02', 
+            link: 'tel:+998958682002',
+            location: 'Калхоз Бозор'
+        },
+        { 
+            number: '+998 (95) 705-20-02', 
+            link: 'tel:+998957052002',
+            location: 'Хазрати Имом'
+        }
     ];
 
     useEffect(() => {
@@ -67,13 +75,19 @@ const Navbar = () => {
 
                     {/* Телефоны для ПК */}
                     <div className="nav-phones">
-                        <a href="tel:+74951234567" className="nav-phone">
-                            <FiPhone className="phone-icon-desktop" />
-                            +998 (95) 868-20-02
-                        </a>
-                        <a href="tel:+74957654321" className="nav-phone">
-                            +998 (95) 705-20-02
-                        </a>
+                        <div className="nav-phone-wrapper">
+                            <span className="nav-phone-location">Калхоз Бозор</span>
+                            <a href="tel:+998958682002" className="nav-phone">
+                                <FiPhone className="phone-icon-desktop" />
+                                +998 (95) 868-20-02
+                            </a>
+                        </div>
+                        <div className="nav-phone-wrapper">
+                            <span className="nav-phone-location">Хазрати Имом</span>
+                            <a href="tel:+998957052002" className="nav-phone">
+                                +998 (95) 705-20-02
+                            </a>
+                        </div>
                     </div>
 
                     <div className="nav-actions">
@@ -134,7 +148,10 @@ const Navbar = () => {
                                 onClick={() => setIsPhoneModalOpen(false)}
                             >
                                 <FiPhone className="phone-item-icon" />
-                                <span>{phone.number}</span>
+                                <div className="phone-item-content">
+                                    <span className="phone-item-location">{phone.location}</span>
+                                    <span className="phone-item-number">{phone.number}</span>
+                                </div>
                             </a>
                         ))}
                     </div>

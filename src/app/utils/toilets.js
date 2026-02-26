@@ -1,7 +1,7 @@
 const TOILETS = [
     {
         id: 1,
-        model: '0401/CLASSICO',
+        model: 'X 0401/CLASSICO',
         type: 'Унитаз',
         height: 400,
         length: 620,
@@ -11,7 +11,7 @@ const TOILETS = [
         lid: 'Крышка с микролифтом Китай',
         fittings: 'Арматура Китай',
         price: 41,
-        image: '/images/toilets/toilet-1.jpg'
+        image: '/images/toilets/1.png'
     },
     {
         id: 2,
@@ -25,7 +25,7 @@ const TOILETS = [
         lid: 'Крышка (PP) АО «Уклад» Россия',
         fittings: 'Арматура «ИнкоЭр» Россия',
         price: 74,
-        image: '/images/toilets/toilet-2.jpg'
+        image: '/images/toilets/2.png'
     },
     {
         id: 3,
@@ -39,7 +39,7 @@ const TOILETS = [
         lid: 'Крышка (PP) АО «Уклад» Россия',
         fittings: 'Арматура «ИнкоЭр» Россия',
         price: 36,
-        image: '/images/toilets/toilet-3.jpg'
+        image: '/images/toilets/3.png'
     },
     {
         id: 4,
@@ -53,7 +53,7 @@ const TOILETS = [
         lid: 'Крышка R&T (PP) Китай',
         fittings: 'Арматура «ИнкоЭр» Россия',
         price: 70,
-        image: '/images/toilets/toilet-4.jpg'
+        image: '/images/toilets/4.png'
     },
     {
         id: 5,
@@ -67,7 +67,7 @@ const TOILETS = [
         lid: 'Крышка R&T (PP) Китай',
         fittings: 'Арматура «ИнкоЭр» Россия',
         price: 70,
-        image: '/images/toilets/toilet-5.jpg'
+        image: '/images/toilets/5.png'
     },
     {
         id: 6,
@@ -81,7 +81,7 @@ const TOILETS = [
         lid: 'Крышка R&T (PP) Китай',
         fittings: 'Арматура «ИнкоЭр» Россия',
         price: 70,
-        image: '/images/toilets/toilet-6.jpg'
+        image: '/images/toilets/6.png'
     },
     {
         id: 7,
@@ -95,7 +95,7 @@ const TOILETS = [
         lid: 'Крышка R&T (PP) Китай',
         fittings: 'Крепления Турция',
         price: 45,
-        image: '/images/toilets/toilet-7.jpg'
+        image: '/images/toilets/7.png'
     },
     {
         id: 8,
@@ -109,7 +109,7 @@ const TOILETS = [
         lid: 'Крышка R&T (PP) Китай',
         fittings: 'Крепления Турция',
         price: 50,
-        image: '/images/toilets/toilet-8.jpg'
+        image: '/images/toilets/8.png'
     },
     {
         id: 9,
@@ -123,7 +123,7 @@ const TOILETS = [
         lid: 'Крышка R&T (UF) Китай',
         fittings: 'Крепления Турция',
         price: 51,
-        image: '/images/toilets/toilet-9.jpg'
+        image: '/images/toilets/9.png'
     },
     {
         id: 10,
@@ -137,7 +137,7 @@ const TOILETS = [
         lid: 'Без крышки',
         fittings: 'Стандарт',
         price: 45,
-        image: '/images/toilets/bidet-1.jpg'
+        image: '/images/toilets/10.png'
     }
 ];
 

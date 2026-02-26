@@ -7,7 +7,7 @@ const Categories = () => {
         {
             id: 1,
             title: 'Душевые кабины',
-            image: '/images/categories/shower.jpg',
+            image: '/images/categories/shower.jpeg',
             link: '/showers'
         },
         {

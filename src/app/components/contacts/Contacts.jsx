@@ -12,18 +12,27 @@ const Contacts = () => {
             city: 'Бухара, Хазрати Имом',
             address: 'ул. Сулеймана Мурадова',
             phone: ['+998 (95) 705-20-02'],
-            email: ['info@santehnika.uz'],
+            email: ['xakimkarimov2002@gmail.com'],
             hours: ['Пн-Вс: 8:30 - 19:00',],
             map: 'https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d6132.233877821713!2d64.40718!3d39.781931!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMznCsDQ2JzU1LjAiTiA2NMKwMjQnMjUuOSJF!5e0!3m2!1sru!2s!4v1772090754831!5m2!1sru!2s'
         },
         {
             id: 2,
             city: 'Бухара, Калхоз бозор',
-            address: 'ул Афросиаб, дом 384',
+            address: 'ул Афросийоб, дом 384',
             phone: ['+998 (95) 868-20-02'],
-            email: ['info@santehnika.uz'],
+            email: ['xakimkarimov2002@gmail.com'],
             hours: ['Пн-Вс: 8:30 - 19:00',],
-            map: 'https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7293.1153660338105!2d64.39237588439777!3d39.77608774322046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2s!4v1772091965270!5m2!1sru!2s'
+            map: 'https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d2578.5129125086996!2d64.39111204635766!3d39.77589430558942!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2s!4v1772110095481!5m2!1sru!2s'
+        },
+        {
+            id: 3,
+            city: 'Бухара, Калхоз бозор',
+            address: 'ул Ибн Сино, дом 19',
+            phone: ['+998 (99) 940-60-60'],
+            email: ['xakimkarimov2002@gmail.com'],
+            hours: ['Пн-Вс: 8:30 - 19:00',],
+            map: 'https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d406.05431904481486!2d64.40737578854055!3d39.781998993603224!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMznCsDQ2JzU1LjQiTiA2NMKwMjQnMjYuNiJF!5e0!3m2!1sru!2s!4v1772109201055!5m2!1sru!2s'
         }
     ];
 

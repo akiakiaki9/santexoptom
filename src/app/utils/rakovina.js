@@ -9,7 +9,7 @@ const SINKS = [
         glaze: 'Испания',
         color: 'Белый (касабланка)',
         price: 23,
-        image: '/images/sinks/sink-1.jpg'
+        image: '/images/rakovina/1.png'
     },
     {
         id: 2,
@@ -20,7 +20,7 @@ const SINKS = [
         glaze: 'Испания',
         color: 'Белый (касабланка)',
         price: 23,
-        image: '/images/sinks/sink-2.jpg'
+        image: '/images/rakovina/2.png'
     },
     {
         id: 3,
@@ -31,7 +31,7 @@ const SINKS = [
         glaze: 'Испания',
         color: 'Белый (касабланка)',
         price: 26,
-        image: '/images/sinks/sink-3.jpg'
+        image: '/images/rakovina/3.png'
     },
     {
         id: 4,
@@ -42,7 +42,7 @@ const SINKS = [
         glaze: 'Испания',
         color: 'Белый (касабланка)',
         price: 27,
-        image: '/images/sinks/sink-4.jpg'
+        image: '/images/rakovina/4.png'
     },
     {
         id: 5,
@@ -53,7 +53,7 @@ const SINKS = [
         glaze: 'Испания',
         color: 'Белый (касабланка)',
         price: 29,
-        image: '/images/sinks/sink-5.jpg'
+        image: '/images/rakovina/5.png'
     },
     {
         id: 6,
@@ -64,7 +64,7 @@ const SINKS = [
         glaze: 'Испания',
         color: 'Белый (касабланка)',
         price: 19,
-        image: '/images/sinks/sink-4.jpg'
+        image: '/images/rakovina/6.png'
     },
     {
         id: 7,
@@ -75,7 +75,7 @@ const SINKS = [
         glaze: 'Испания',
         color: 'Белый (касабланка)',
         price: 21,
-        image: '/images/sinks/sink-5.jpg'
+        image: '/images/rakovina/7.png'
     },
     {
         id: 8,
@@ -86,7 +86,7 @@ const SINKS = [
         glaze: 'Испания',
         color: 'Белый (касабланка)',
         price: 27,
-        image: '/images/sinks/sink-6.jpg'
+        image: '/images/rakovina/8.png'
     },
     {
         id: 9,
@@ -97,7 +97,7 @@ const SINKS = [
         glaze: 'Испания',
         color: 'Белый (касабланка)',
         price: 27,
-        image: '/images/sinks/sink-7.jpg'
+        image: '/images/rakovina/9.png'
     },
     {
         id: 10,
@@ -108,7 +108,7 @@ const SINKS = [
         glaze: 'Испания',
         color: 'Белый (касабланка)',
         price: 30,
-        image: '/images/sinks/sink-8.jpg'
+        image: '/images/rakovina/10.png'
     },
     {
         id: 11,
@@ -119,7 +119,7 @@ const SINKS = [
         glaze: 'Испания',
         color: 'Белый (касабланка)',
         price: 45,
-        image: '/images/sinks/sink-9.jpg'
+        image: '/images/rakovina/11.png'
     },
     {
         id: 12,
@@ -130,7 +130,7 @@ const SINKS = [
         glaze: 'Испания',
         color: 'Белый (касабланка)',
         price: 29,
-        image: '/images/sinks/sink-10.jpg'
+        image: '/images/rakovina/12.png'
     },
     {
         id: 13,
@@ -141,7 +141,7 @@ const SINKS = [
         glaze: 'Испания',
         color: 'Белый (касабланка)',
         price: 67.5,
-        image: '/images/sinks/sink-11.jpg'
+        image: '/images/rakovina/13.png'
     },
     {
         id: 14,
@@ -152,7 +152,7 @@ const SINKS = [
         glaze: 'Испания',
         color: 'Белый (касабланка)',
         price: 9,
-        image: '/images/sinks/pedestal-1.jpg'
+        image: '/images/rakovina/14.png'
     },
     {
         id: 15,
@@ -163,7 +163,7 @@ const SINKS = [
         glaze: 'Испания',
         color: 'Белый (касабланка)',
         price: 9,
-        image: '/images/sinks/pedestal-2.jpg'
+        image: '/images/rakovina/15.png'
     }
 ];
 
