@@ -163,7 +163,6 @@ const Chashagen = () => {
                                             <p className="product-details">
                                                 Глазурь: {product.glaze}<br />
                                                 Цвет: {product.color}<br />
-                                                Цена: ${product.price}
                                             </p>
                                             <button
                                                 className="product-details-btn"

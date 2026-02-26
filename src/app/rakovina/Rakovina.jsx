@@ -360,10 +360,6 @@ const Rakovina = () => {
                                             <td>Цвет:</td>
                                             <td>{selectedProduct.color}</td>
                                         </tr>
-                                        <tr>
-                                            <td>Цена:</td>
-                                            <td>${selectedProduct.price}</td>
-                                        </tr>
                                     </tbody>
                                 </table>
                             </div>

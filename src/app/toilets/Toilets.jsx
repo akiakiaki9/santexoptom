@@ -220,7 +220,6 @@ const ToiletsPage = () => {
                                             <p className="product-details">
                                                 Глазурь: {product.glaze}<br />
                                                 Цвет: {product.color}<br />
-                                                Цена: ${product.price}
                                             </p>
                                             <button
                                                 className="product-details-btn"
@@ -405,10 +404,6 @@ const ToiletsPage = () => {
                                         <tr>
                                             <td>Арматура:</td>
                                             <td>{selectedProduct.fittings}</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Цена:</td>
-                                            <td>${selectedProduct.price}</td>
                                         </tr>
                                     </tbody>
                                 </table>
