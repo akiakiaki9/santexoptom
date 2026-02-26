@@ -27,11 +27,17 @@ const Categories = () => {
             title: 'Раковины',
             image: '/images/categories/rakovina.jpg',
             link: '/rakovina'
+        },
+        {
+            id: 5,
+            title: 'Чашагены',
+            image: '/images/categories/chashagen.webp',
+            link: '/squat-toilet'
         }
     ];
 
     return (
-        <section className="categories-section">
+        <section className="categories-section" id='categories'>
             <div className="categories-container">
                 {categories.map((category) => (
                     <a key={category.id} href={category.link} className="category-card">

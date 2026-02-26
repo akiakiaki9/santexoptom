@@ -16,7 +16,7 @@ const Footer = () => {
                     <div className="footer-col">
                         <h3 className="footer-logo">Сантехника</h3>
                         <p className="footer-description">
-                            Интернет-магазин сантехники с 2010 года. Более 5000 товаров в наличии.
+                            Интернет-магазин сантехники в Бухаре. Лучшие товары в наличии.
                         </p>
                     </div>
 
@@ -27,6 +27,7 @@ const Footer = () => {
                             <li><a href="/radiators">Радиаторы</a></li>
                             <li><a href="/toilets">Унитазы</a></li>
                             <li><a href="/rakovina">Раковины</a></li>
+                            <li><a href="/squat-toilet">Чашогены</a></li>
                         </ul>
                     </div>
 
@@ -35,11 +36,15 @@ const Footer = () => {
                         <ul className="footer-contacts">
                             <li className="contact-item">
                                 <FiMapPin className="contact-icon" />
-                                <span>Москва, ул. Строителей, 15</span>
+                                <span>Бухара, Калхоз бозор</span>
                             </li>
                             <li className="contact-item">
                                 <FiPhone className="contact-icon" />
-                                <a href="tel:+74951234567">+7 (495) 123-45-67</a>
+                                <a href="tel:+74951234567">+998 (95) 705-20-02</a>
+                            </li>
+                            <li className="contact-item">
+                                <FiPhone className="contact-icon" />
+                                <a href="tel:+74951234567">+998 (95) 868-20-02</a>
                             </li>
                             <li className="contact-item">
                                 <FiMail className="contact-icon" />
@@ -63,10 +68,10 @@ const Footer = () => {
 
                 <div className="footer-bottom">
                     <p className="copyright">
-                        &copy; 2024 Сантехника. Все права защищены.
+                        &copy; 2026 SANTEX OPTOM. Все права защищены.
                     </p>
                     <p className="developer">
-                        Разработано в <a href="">Akbar Soft</a>
+                        Разработано в <a href="https://akbarsoft.uz">Akbar Soft</a>
                     </p>
                 </div>
             </div>

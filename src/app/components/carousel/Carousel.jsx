@@ -69,7 +69,9 @@ const Carousel = () => {
                                 <div className="carousel-content">
                                     <h2 className="carousel-title">{slide.title}</h2>
                                     <p className="carousel-description">{slide.description}</p>
-                                    <button className="carousel-button-more">Подробнее</button>
+                                    <a href="/#categories" className="carousel-button-more">
+                                        Подробнее
+                                    </a>
                                 </div>
                             </div>
                         </div>

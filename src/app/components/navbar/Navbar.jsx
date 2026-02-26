@@ -1,9 +1,11 @@
 'use client'
 import React, { useState, useEffect } from 'react';
+import { FiPhone, FiX } from 'react-icons/fi';
 import './navbar.css';
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [isPhoneModalOpen, setIsPhoneModalOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
     const [activePath, setActivePath] = useState('/');
 
@@ -12,7 +14,13 @@ const Navbar = () => {
         { path: '/showers', label: 'Душевые' },
         { path: '/radiators', label: 'Радиаторы' },
         { path: '/toilets', label: 'Унитазы' },
-        { path: '/sinks', label: 'Раковины' }
+        { path: '/rakovina', label: 'Раковины' },
+        { path: '/squat-toilet', label: 'Чашагены' },
+    ];
+
+    const phoneNumbers = [
+        { number: '+998 (95) 868-20-02', link: 'tel:+998958682002' },
+        { number: '+998 (95) 705-20-02', link: 'tel:+998957052002' }
     ];
 
     useEffect(() => {
@@ -27,63 +35,116 @@ const Navbar = () => {
     }, []);
 
     useEffect(() => {
-        if (isMenuOpen) {
+        if (isMenuOpen || isPhoneModalOpen) {
             document.body.style.overflow = 'hidden';
         } else {
             document.body.style.overflow = 'unset';
         }
-    }, [isMenuOpen]);
+    }, [isMenuOpen, isPhoneModalOpen]);
 
     return (
-        <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
-            <div className="nav-container">
-                <a href="/" className="nav-logo">
-                    SANTEX OPTOM
-                </a>
+        <>
+            <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
+                <div className="nav-container">
+                    <a href="/" className="nav-logo">
+                        SANTEX OPTOM
+                    </a>
 
-                {/* Десктоп меню */}
-                <ul className="nav-menu">
-                    {menuItems.map((item) => (
-                        <li key={item.path}>
+                    {/* Десктоп меню */}
+                    <ul className="nav-menu">
+                        {menuItems.map((item) => (
+                            <li key={item.path}>
+                                <a
+                                    href={item.path}
+                                    className={`nav-link ${activePath === item.path ? 'active' : ''}`}
+                                >
+                                    {item.label}
+                                    <span className="nav-link-indicator"></span>
+                                </a>
+                            </li>
+                        ))}
+                    </ul>
+
+                    {/* Телефоны для ПК */}
+                    <div className="nav-phones">
+                        <a href="tel:+74951234567" className="nav-phone">
+                            <FiPhone className="phone-icon-desktop" />
+                            +998 (95) 868-20-02
+                        </a>
+                        <a href="tel:+74957654321" className="nav-phone">
+                            +998 (95) 705-20-02
+                        </a>
+                    </div>
+
+                    <div className="nav-actions">
+                        {/* Иконка телефона для мобилок */}
+                        <button
+                            className="phone-icon-mobile"
+                            onClick={() => setIsPhoneModalOpen(true)}
+                            aria-label="Позвонить"
+                        >
+                            <FiPhone />
+                        </button>
+
+                        {/* Бургер */}
+                        <button
+                            className={`burger ${isMenuOpen ? 'active' : ''}`}
+                            onClick={() => setIsMenuOpen(!isMenuOpen)}
+                            aria-label="Меню"
+                        >
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </div>
+
+                    {/* Мобильное меню */}
+                    <div className={`mobile-nav ${isMenuOpen ? 'active' : ''}`}>
+                        <div className="mobile-nav-content">
+                            {menuItems.map((item, index) => (
+                                <a
+                                    key={item.path}
+                                    href={item.path}
+                                    className={`mobile-nav-link ${activePath === item.path ? 'active' : ''}`}
+                                    onClick={() => setIsMenuOpen(false)}
+                                >
+                                    {item.label}
+                                </a>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            {/* Модальное окно с телефонами для мобилок */}
+            <div className={`phone-modal ${isPhoneModalOpen ? 'active' : ''}`} onClick={() => setIsPhoneModalOpen(false)}>
+                <div className="phone-modal-content" onClick={e => e.stopPropagation()}>
+                    <button className="phone-modal-close" onClick={() => setIsPhoneModalOpen(false)}>
+                        <FiX />
+                    </button>
+
+                    <h3 className="phone-modal-title">Позвоните нам</h3>
+
+                    <div className="phone-list">
+                        {phoneNumbers.map((phone, index) => (
                             <a
-                                href={item.path}
-                                className={`nav-link ${activePath === item.path ? 'active' : ''}`}
+                                key={index}
+                                href={phone.link}
+                                className="phone-item"
+                                onClick={() => setIsPhoneModalOpen(false)}
                             >
-                                {item.label}
-                                <span className="nav-link-indicator"></span>
-                            </a>
-                        </li>
-                    ))}
-                </ul>
-
-                {/* Бургер */}
-                <button
-                    className={`burger ${isMenuOpen ? 'active' : ''}`}
-                    onClick={() => setIsMenuOpen(!isMenuOpen)}
-                    aria-label="Меню"
-                >
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-
-                {/* Мобильное меню */}
-                <div className={`mobile-nav ${isMenuOpen ? 'active' : ''}`}>
-                    <div className="mobile-nav-content">
-                        {menuItems.map((item, index) => (
-                            <a
-                                key={item.path}
-                                href={item.path}
-                                className={`mobile-nav-link ${activePath === item.path ? 'active' : ''}`}
-                                onClick={() => setIsMenuOpen(false)}
-                            >
-                                {item.label}
+                                <FiPhone className="phone-item-icon" />
+                                <span>{phone.number}</span>
                             </a>
                         ))}
                     </div>
+
+                    <p className="phone-modal-hint">
+                        Работаем ежедневно с 8:30 до 19:00
+                    </p>
                 </div>
             </div>
-        </nav>
+        </>
     );
 };
 

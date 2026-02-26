@@ -8,7 +8,7 @@ const Features = () => {
         {
             id: 1,
             icon: <TbTruckDelivery />,
-            title: 'Бесплатная доставка',
+            title: 'Доставка по Узбекистану',
             description: 'При заказе от 50 000₽ по Москве',
             highlight: '50 000₽'
         },
