@@ -48,7 +48,7 @@ const Footer = () => {
                             </li>
                             <li className="contact-item">
                                 <FiMail className="contact-icon" />
-                                <a href="mailto:info@santehnika.ru">info@santehnika.ru</a>
+                                <a href="mailto:info@santehnika.ru">xakimkarimov2002@gmail.com</a>
                             </li>
                         </ul>
                     </div>
