@@ -40,15 +40,19 @@ const Footer = () => {
                             </li>
                             <li className="contact-item">
                                 <FiPhone className="contact-icon" />
-                                <a href="tel:+74951234567">+998 (95) 705-20-02</a>
+                                <a href="tel:+998957052002">+998 (95) 705-20-02</a>
                             </li>
                             <li className="contact-item">
                                 <FiPhone className="contact-icon" />
-                                <a href="tel:+74951234567">+998 (95) 868-20-02</a>
+                                <a href="tel:+998958682002">+998 (95) 868-20-02</a>
+                            </li>
+                            <li className="contact-item">
+                                <FiPhone className="contact-icon" />
+                                <a href="tel:+998999406060">+998 (99) 940-60-60</a>
                             </li>
                             <li className="contact-item">
                                 <FiMail className="contact-icon" />
-                                <a href="mailto:info@santehnika.ru">xakimkarimov2002@gmail.com</a>
+                                <a href="mailto:xakimkarimov2002@gmail.com">xakimkarimov2002@gmail.com</a>
                             </li>
                         </ul>
                     </div>
@@ -56,10 +60,10 @@ const Footer = () => {
                     <div className="footer-col">
                         <h4 className="footer-title">Мы в сети</h4>
                         <div className="social-links">
-                            <a href="https://t.me/santehnika" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="Telegram">
+                            <a href="https://t.me/CREATIVE6060" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="Telegram">
                                 <FaTelegramPlane />
                             </a>
-                            <a href="https://instagram.com/santehnika" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="Instagram">
+                            <a href="https://www.instagram.com/creative_buhara/" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="Instagram">
                                 <FiInstagram />
                             </a>
                         </div>

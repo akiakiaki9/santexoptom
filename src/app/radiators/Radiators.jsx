@@ -90,7 +90,7 @@ const RadiatorsPage = () => {
                     </div>
 
                     <div className="radiators-header">
-                        <h1 className="radiators-title">Радиаторы</h1>
+                        <h1 className="radiators-title">Радиаторы (+998 99 940-60-60)</h1>
 
                         {/* Кнопка фильтра для мобилок */}
                         <button
